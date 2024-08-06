@@ -5,21 +5,24 @@ using namespace std;
 int main()
 {
     stack<int> st;
+    int R;
+    cout << " Enter size of array: ";
+    cin >> R;
+    int V[R];
 
-    int V[5] = {10,
-                 20,
-                 30,
-                 40,
-                 50};
-
-    for (int i = 0; i < 5; i++)
+    cout << endl
+         << " ------Enter Values for Array------ " << endl;
+    for (int i = 0; i < R; i++)
     {
+        cout << "Value " << i + 1 << " = ";
+        cin >> V[i];
         st.push(V[i]);
     }
 
     stack<int> newst;
 
-    cout << " Normal Stack: ";
+    cout << endl
+         << " Normal Stack: ";
     while (!st.empty())
     {
         cout << st.top() << " ";
